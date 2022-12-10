@@ -1,0 +1,52 @@
+endpoint:
+  /api/v1/checkout:
+    200:
+      data: 2
+      sample:
+        - |
+          {
+            "messages": "updated successfully",
+            "data": {
+              "detail": false,
+              "status": "crash"
+            },
+              "errors": null,
+              "code": 200
+          }
+        - |
+          {
+            "messages": "data was found",
+            "data": {
+              "status": "okay",
+              "detail": true
+            },
+            "errors": null,
+            "code": 200
+          }
+    400:
+      sample: |
+        {
+          "code": 400,
+          "messages": "validasi data kamu ada yang tidak sesuai, silahkan periksa kembali",
+          "data": null,
+          "errors": [
+            {
+                "parameter": "customer_id",
+                "message": "customer id tidak boleh kosong"
+            }
+          ]
+        }
+  /api/v1/order:
+    status: 400
+    400:
+      sample: |
+        {
+          "code": 400,
+          "messages": "oops!! something was wrong",
+          "errors": [
+            {
+              "parameter": "customer_id",
+              "message": "customer id tidak boleh kosong"
+            }
+          ]
+        }

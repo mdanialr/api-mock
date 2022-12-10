@@ -1,0 +1,5 @@
+# dev tools
+.air.toml
+tmp/
+# config
+app.yml
