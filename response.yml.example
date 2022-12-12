@@ -1,5 +1,5 @@
 endpoint:
-  /api/v1/checkout:
+  /api/v1/test:
     200:
       data: 2
       sample:
@@ -27,16 +27,16 @@ endpoint:
       sample: |
         {
           "code": 400,
-          "messages": "validasi data kamu ada yang tidak sesuai, silahkan periksa kembali",
+          "messages": "validation failed",
           "data": null,
           "errors": [
             {
-                "parameter": "customer_id",
-                "message": "customer id tidak boleh kosong"
+                "param": "id",
+                "message": "id is required"
             }
           ]
         }
-  /api/v1/order:
+  /api/v1/try:
     status: 400
     400:
       sample: |
@@ -45,8 +45,8 @@ endpoint:
           "messages": "oops!! something was wrong",
           "errors": [
             {
-              "parameter": "customer_id",
-              "message": "customer id tidak boleh kosong"
+              "param": "id",
+              "message": "id is required"
             }
           ]
         }
