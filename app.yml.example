@@ -1,4 +1,4 @@
-host:
-port:
-response_dir: .
-response_name: response
+host: 127.0.0.1 # default to 127.0.0.1
+port: 9595 # default to 9595
+response_dir: . # default to . which is current directory where the binary is executed
+response_name: response # default to response that will read config file response.yml
