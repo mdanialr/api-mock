@@ -3,21 +3,25 @@ Simple API mock that will help to serve JSON response that's been defined in con
 
 # How to Use
 1. Download the binary from [GitHub Releases](https://github.com/mdanialr/api-mock/releases)
-2. Create app config file.
+2. Extract to dir `api-mock/`
+    ```bash
+    mkdir api-mock
+    tar -C api-mock -xzf api-mock_version_os_arch.tar.gz
+    ```
+3. Create app config file.
     ```bash
     cp app.yml.example app.yml
     ```
-   Above app config will read json response in current directory with response.yml as the config filename.
-3. Create yaml file to define the endpoint along with their respective response
+   Above app config will read json response in current directory with `response.yml` as the config filename.
+4. Create yaml file to define the endpoint along with their respective response
     ```bash
     cp response.yml.example response.yml
     ```
-4. Extract then run to check if there is any error in config file
+5. Run
     ```bash
-    tar -xzf api-mock....tar.gz
     ./api-mock
     ```
-5. Hit endpoint `/api/v1/test` will return status code `200` and json response like
+6. Hit endpoint `/api/v1/test` will return status code `200` and json response like
     ```json
     {
       "messages": "data was found",
@@ -29,7 +33,7 @@ Simple API mock that will help to serve JSON response that's been defined in con
       "code": 200
     }
     ```
-6. You can add another endpoint along with their json response as many as you want, and of course you does not need to restart the app since it support hot reload thanks to [Viper](https://github.com/spf13/viper) 
+7. You can add another endpoint along with their json response as many as you want, and of course you does not need to restart the app since it support hot reload thanks to [Viper](https://github.com/spf13/viper) 
 
 # Known Limitation
 - Only support `JSON` response
