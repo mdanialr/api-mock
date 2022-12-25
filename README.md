@@ -40,3 +40,6 @@ Simple API mock that will help to serve JSON response that's been defined in con
 - Does not support auth. so anyone can hit the endpoint and get the JSON response
 - Does not support any request validation (future development)
 - Does not support giving multiple responses in single endpoint. say you want give response either `200` or `400` according to request in single endpoint
+
+# License
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE "LICENSE") file for details.
