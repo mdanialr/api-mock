@@ -10,4 +10,4 @@ archives:
   - files:
       - LICENSE
       - README.md
-      - *.example
+      - src: '*.example'
